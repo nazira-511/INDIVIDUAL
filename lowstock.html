@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lowstock</title>
+<style>
+
+/* GLOBAL BODY */
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff; /* putih bersih */
+    color: #000000; /* teks hitam */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Paragraph */
+p {
+    color: #000000; /* hitam */
+    font-size: 13px;
+    font-weight: normal;
+    margin-left: 250px;
+    line-height: 1.3; /* sedikit jarak antara baris */
+}
+
+/* Main Section */
+section {
+    padding: 20px;
+    margin-top: 70px; /* space for fixed navbar */
+}
+
+/* Heading */
+h1 {
+    color: #000000; /* hitam */
+    text-align: center;
+}
+
+/* Table Styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* soft shadow */
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #888888; /* slightly darker line */
+}
+
+th {
+    background-color: #f0f0f0; /* subtle gray header */
+    color: #000000;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Status Badges */
+.status-ok {
+    background-color: #d6f5d6; /* green */
+    color: #006600;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.status-low {
+    background-color: #ffe9cc; /* orange */
+    color: #b35a00;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.status-critical {
+    background-color: #ffcccc; /* red */
+    color: #b30000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Button */
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #04AA6D; /* green normal */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #059862; /* darker green hover */
+}
+
+.testbtn {
+    display: inline-block;
+    width: auto;
+    margin-right: auto;
+    background-color: #8B0000; /* red for testbtn normal */
+    color: white;
+}
+
+.testbtn:hover {
+    background-color: #ff4d4d; /* lighter red hover */
+}
+
+</style>
+
+<body>
+
+    
+</style>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a href="dashboard.html">
+    <button class="testbtn">Back</button>
+</a>
+
+    <h1>Low Stock Ingredients</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ingredient</th>
+                <th>Category</th>
+                <th>Stock</th>
+                <th>Min Level</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="ingredient-table">
+            <!-- JS will populate rows here -->
+        </tbody>
+    </table>
+
+    <script src="ingredients.js"></script>
+    
+</body>
+</html>
+
+</body>

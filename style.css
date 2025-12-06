@@ -1,0 +1,93 @@
+body { /* background */
+    font-family: Arial, sans-serif;
+    background: #ffffff; /* putih bersih */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.box {
+    background: #ffffff; /* box putih */
+    padding: 30px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); /* lebih soft shadow */
+    text-align: left;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #000000; /* hitam */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #888888; /* subtle gray border */
+    border-radius: 5px;
+}
+
+button { /*button log in*/
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #000000; /* hitam */
+    color: #ffffff; /* putih text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #333333; /* hover dark gray */
+}
+
+#msg {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Remove default margin/padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar atas styling */
+nav {
+    background-color: #ffffff; /* putih */
+    padding: 10px 0;
+    position: fixed;    
+    top: 0;             
+    width: 100%;        
+    z-index: 1000;      
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+/* Remove list style and align horizontally nav bar */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+/* Navbar items */
+nav ul li {
+    margin: 0 20px;
+}
+
+/* Links styling */
+nav ul li a {
+    color: #000000; /* hitam */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #555555; /* hover medium gray */
+}

@@ -1,0 +1,57 @@
+<table id="menu-table">
+    <thead>
+        <tr><th>Item</th><th>Category</th><th>Price</th></tr>
+    </thead>
+    <tbody>
+        <tr class="menu-item" data-item="latte">
+            <td>Latte</td><td>Beverage</td><td>RM8.00</td>
+        </tr>
+        <tr class="menu-item-details" id="details-latte">
+            <td colspan="3">
+                <img src="latte.jpg" alt="Latte" width="100">
+                <p>Kcal: 150, Sugar: 10g</p>
+            </td>
+        </tr>
+
+        <tr class="menu-item" data-item="mocha">
+            <td>Mocha</td><td>Beverage</td><td>RM9.00</td>
+        </tr>
+        <tr class="menu-item-details" id="details-mocha">
+            <td colspan="3">
+                <img src="mocha.jpg" alt="Mocha" width="100">
+                <p>Kcal: 200, Sugar: 15g</p>
+            </td>
+        </tr>
+
+        <tr class="menu-item" data-item="cheesecake">
+            <td>Cheesecake</td><td>Dessert</td><td>RM12.00</td>
+        </tr>
+        <tr class="menu-item-details" id="details-cheesecake">
+            <td colspan="3">
+                <img src="cheesecake.jpg" alt="Cheesecake" width="100">
+                <p>Kcal: 300, Sugar: 25g</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<style>
+.menu-item-details { display: none; background: #f9f9f9; }
+.menu-item { cursor: pointer; }
+</style>
+
+<script>
+const items = document.querySelectorAll('.menu-item');
+items.forEach(item => {
+    item.addEventListener('click', () => {
+        const name = item.dataset.item;
+        const detailsRow = document.getElementById('details-' + name);
+        // toggle show/hide
+        if(detailsRow.style.display === 'table-row') {
+            detailsRow.style.display = 'none';
+        } else {
+            detailsRow.style.display = 'table-row';
+        }
+    });
+});
+</script>

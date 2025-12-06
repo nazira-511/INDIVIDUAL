@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Data View</title>
+<link rel="stylesheet" href="css/dataview.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <ul>
+        <li><a href="welcome.html">Back</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="dataview.html">Data View</a></li>
+        <li><a href="charts.html">Chart</a></li>
+    </ul>
+</nav>
+
+<h1>Data View</h1>
+
+<!-- MENU LIST -->
+<div class="list-card">
+    <h2>Menu List</h2>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu List</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<div class="list-card">
+    <div class="search-container">
+        <input type="text" id="menu-search" placeholder="Search menu...">
+    </div>
+
+    <table id="menu-table">
+        <thead>
+            <tr><th>Item</th><th>Category</th><th>Price</th></tr>
+        </thead>
+        <tbody>
+            <tr class="menu-item" data-item="latte">
+                <td>Latte</td><td>Beverage</td><td>RM8.00</td>
+            </tr>
+            <tr class="menu-item-details" id="details-latte">
+                <td colspan="3">
+                    <img src="gambar/latte.jpg" alt="Latte" width="100">
+                    <p>Kcal: 150 | Sugar: 10g</p>
+                </td>
+            </tr>
+
+            <tr class="menu-item" data-item="mocha">
+                <td>Mocha</td><td>Beverage</td><td>RM9.00</td>
+            </tr>
+            <tr class="menu-item-details" id="details-mocha">
+                <td colspan="3">
+                    <img src="gambar/mocha.jpg" alt="Mocha" width="100">
+                    <p>Kcal: 200 | Sugar: 15g</p>
+                </td>
+            </tr>
+
+            <tr class="menu-item" data-item="cheesecake">
+                <td>Cheesecake</td><td>Dessert</td><td>RM12.00</td>
+            </tr>
+            <tr class="menu-item-details" id="details-cheesecake">
+                <td colspan="3">
+                    <img src="gambar/cheesecake.jpg" alt="Cheesecake" width="100">
+                    <p>Kcal: 300 | Sugar: 25g</p>
+                </td>
+            </tr>
+
+<!-- 3. Cappuccino -->
+<tr class="menu-item" data-item="cappuccino">
+    <td>Cappuccino</td><td>Beverage</td><td>RM8.50</td>
+</tr>
+<tr class="menu-item-details" id="details-cappuccino">
+    <td colspan="3">
+        <img src="gambar/cappucino.jpg" alt="Cappuccino" width="100">
+        <p>Kcal: 160 | Sugar: 11g</p>
+    </td>
+</tr>
+
+<!-- 4. Americano -->
+<tr class="menu-item" data-item="americano">
+    <td>Americano</td><td>Beverage</td><td>RM7.00</td>
+</tr>
+<tr class="menu-item-details" id="details-americano">
+    <td colspan="3">
+        <img src="gambar/americano.jpg" alt="Americano" width="100">
+        <p>Kcal: 120 | Sugar: 0g</p>
+    </td>
+</tr>
+
+<!-- 5. Espresso -->
+<tr class="menu-item" data-item="espresso">
+    <td>Espresso</td><td>Beverage</td><td>RM6.50</td>
+</tr>
+<tr class="menu-item-details" id="details-espresso">
+    <td colspan="3">
+        <img src="gambar/espresso.jpg" alt="Espresso" width="100">
+        <p>Kcal: 80 | Sugar: 0g</p>
+    </td>
+</tr>
+
+<!-- 6. Hot Chocolate -->
+<tr class="menu-item" data-item="hotchocolate">
+    <td>Hot Chocolate</td><td>Beverage</td><td>RM9.50</td>
+</tr>
+<tr class="menu-item-details" id="details-hotchocolate">
+    <td colspan="3">
+        <img src="gambar/hot chocolate.jpg" alt="Hot Chocolate" width="100">
+        <p>Kcal: 200 | Sugar: 15g</p>
+    </td>
+</tr>
+
+<!-- 7. Matcha Latte -->
+<tr class="menu-item" data-item="matcha">
+    <td>Matcha Latte</td><td>Beverage</td><td>RM9.00</td>
+</tr>
+<tr class="menu-item-details" id="details-matcha">
+    <td colspan="3">
+        <img src="gambar/matcha latte.jpg" alt="Matcha Latte" width="100">
+        <p>Kcal: 170 | Sugar: 12g</p>
+    </td>
+</tr>
+
+<!-- 11. Brownie -->
+<tr class="menu-item" data-item="brownie">
+    <td>Brownie</td><td>Dessert</td><td>RM10.00</td>
+</tr>
+<tr class="menu-item-details" id="details-brownie">
+    <td colspan="3">
+        <img src="gambar/brownie.jpg" alt="Brownie" width="100">
+        <p>Kcal: 320 | Sugar: 22g</p>
+    </td>
+</tr>
+
+<!-- 12. Croissant -->
+<tr class="menu-item" data-item="croissant">
+    <td>Croissant</td><td>Dessert</td><td>RM6.50</td>
+</tr>
+<tr class="menu-item-details" id="details-croissant">
+    <td colspan="3">
+        <img src="gambar/croissant.jpg" alt="Croissant" width="100">
+        <p>Kcal: 250 | Sugar: 8g</p>
+    </td>
+</tr>
+
+<!-- 13. Muffin -->
+<tr class="menu-item" data-item="muffin">
+    <td>Muffin</td><td>Dessert</td><td>RM7.00</td>
+</tr>
+<tr class="menu-item-details" id="details-muffin">
+    <td colspan="3">
+        <img src="gambar/muffin.jpg" alt="Muffin" width="100">
+        <p>Kcal: 280 | Sugar: 12g</p>
+    </td>
+</tr>
+
+<!-- 14. Sandwich -->
+<tr class="menu-item" data-item="sandwich">
+    <td>Sandwich</td><td>Snack</td><td>RM8.50</td>
+</tr>
+<tr class="menu-item-details" id="details-sandwich">
+    <td colspan="3">
+        <img src="gambar/sandwhich.jpg" alt="Sandwich" width="100">
+        <p>Kcal: 300 | Sugar: 5g</p>
+    </td>
+</tr>
+
+<!-- 16. Bagel -->
+<tr class="menu-item" data-item="bagel">
+    <td>Bagel</td><td>Snack</td><td>RM6.00</td>
+</tr>
+<tr class="menu-item-details" id="details-bagel">
+    <td colspan="3">
+        <img src="gambar/bagel.jpg" alt="Bagel" width="100">
+        <p>Kcal: 240 | Sugar: 4g</p>
+    </td>
+</tr>
+
+<!-- 17. Donut -->
+<tr class="menu-item" data-item="donut">
+    <td>Donut</td><td>Dessert</td><td>RM5.00</td>
+</tr>
+<tr class="menu-item-details" id="details-donut">
+    <td colspan="3">
+        <img src="gambar/donut" alt="Donut" width="100">
+        <p>Kcal: 300 | Sugar: 20g</p>
+    </td>
+</tr>
+
+<!-- 18. Macaron -->
+<tr class="menu-item" data-item="macaron">
+    <td>Macaron</td><td>Dessert</td><td>RM4.50</td>
+</tr>
+<tr class="menu-item-details" id="details-macaron">
+    <td colspan="3">
+        <img src="gambar/macaron.jpg" alt="Macaron" width="100">
+        <p>Kcal: 150 | Sugar: 15g</p>
+    </td>
+</tr>
+
+<!-- 19. Frappe -->
+<tr class="menu-item" data-item="frappe">
+    <td>Frappe</td><td>Beverage</td><td>RM9.50</td>
+</tr>
+<tr class="menu-item-details" id="details-frappe">
+    <td colspan="3">
+        <img src="gambar/frappe.jpg" alt="Frappe" width="100">
+        <p>Kcal: 220 | Sugar: 18g</p>
+    </td>
+</tr>
+
+<!-- 20. Affogato -->
+<tr class="menu-item" data-item="affogato">
+    <td>Affogato</td><td>Beverage</td><td>RM10.00</td>
+</tr>
+<tr class="menu-item-details" id="details-affogato">
+    <td colspan="3">
+        <img src="gambar/affogato.jpg" alt="Affogato" width="100">
+        <p>Kcal: 200 | Sugar: 12g</p>
+    </td>
+</tr>
+
+<!-- 21. Iced Tea -->
+<tr class="menu-item" data-item="icedtea">
+    <td>Iced Tea</td><td>Beverage</td><td>RM6.00</td>
+</tr>
+<tr class="menu-item-details" id="details-icedtea">
+    <td colspan="3">
+        <img src="gambar/ice tea.jpg" alt="Iced Tea" width="100">
+        <p>Kcal: 80 | Sugar: 8g</p>
+    </td>
+</tr>
+
+<!-- 22. Lemonade -->
+<tr class="menu-item" data-item="lemonade">
+    <td>Lemonade</td><td>Beverage</td><td>RM7.00</td>
+</tr>
+<tr class="menu-item-details" id="details-lemonade">
+    <td colspan="3">
+        <img src="gambar/lemonade.jpg" alt="Lemonade" width="100">
+        <p>Kcal: 60 | Sugar: 5g</p>
+    </td>
+</tr>
+
+<!-- 24. Croissant Sandwich -->
+<tr class="menu-item" data-item="croissant-sandwich">
+    <td>Croissant Sandwich</td><td>Snack</td><td>RM9.50</td>
+</tr>
+<tr class="menu-item-details" id="details-croissant-sandwich">
+    <td colspan="3">
+        <img src="gambar/croissant sandwhich.jpg" alt="Croissant Sandwich" width="100">
+        <p>Kcal: 280 | Sugar: 6g</p>
+    </td>
+</tr>
+
+<!-- 27. Chocolate Cake -->
+<tr class="menu-item" data-item="chocolate-cake">
+    <td>Chocolate Cake</td><td>Dessert</td><td>RM12.50</td>
+</tr>
+<tr class="menu-item-details" id="details-chocolate-cake">
+    <td colspan="3">
+        <img src="gambar/chocolate cake.jpg" alt="Chocolate Cake" width="100">
+        <p>Kcal: 400 | Sugar: 30g</p>
+    </td>
+</tr>
+
+<!-- 28. Carrot Cake -->
+<tr class="menu-item" data-item="carrot-cake">
+    <td>Carrot Cake</td><td>Dessert</td><td>RM11.00</td>
+</tr>
+<tr class="menu-item-details" id="details-carrot-cake">
+    <td colspan="3">
+        <img src="gambar/carrot cake.jpg"alt="Carrot Cake" width="100">
+        <p>Kcal: 380 | Sugar: 28g</p>
+    </td>
+</tr>
+
+<!-- 29. Muffin Blueberry -->
+<tr class="menu-item" data-item="muffin-blueberry">
+    <td>Blueberry Muffin</td><td>Dessert</td><td>RM7.50</td>
+</tr>
+<tr class="menu-item-details" id="details-muffin-blueberry">
+    <td colspan="3">
+        <img src="gambar/blueberry muffin.jpg" alt="Blueberry Muffin" width="100">
+        <p>Kcal: 290 | Sugar: 12g</p>
+    </td>
+</tr>
+
+<!-- 30. Almond Croissant -->
+<tr class="menu-item" data-item="almond-croissant">
+    <td>Almond Croissant</td><td>Dessert</td><td>RM7.50</td>
+</tr>
+<tr class="menu-item-details" id="details-almond-croissant">
+    <td colspan="3">
+        <img src="gambar/croissant almond.jpg"alt="Almond Croissant" width="100">
+        <p>Kcal: 270 | Sugar: 10g</p>
+    </td>
+</tr>
+
+<!-- 31. Iced Latte Caramel -->
+<tr class="menu-item" data-item="iced-latte-caramel">
+    <td>Iced Latte Caramel</td><td>Beverage</td><td>RM9.50</td>
+</tr>
+<tr class="menu-item-details" id="details-iced-latte-caramel">
+    <td colspan="3">
+        <img src="gambar/Iced Caramel Latte Recipe.jpg" alt="Iced Latte Caramel" width="100">
+        <p>Kcal: 160 | Sugar: 12g</p>
+    </td>
+</tr>
+
+<!-- 32. Iced Matcha -->
+<tr class="menu-item" data-item="iced-matcha">
+    <td>Iced Matcha</td><td>Beverage</td><td>RM9.50</td>
+</tr>
+<tr class="menu-item-details" id="details-iced-matcha">
+    <td colspan="3">
+        <img src="gambar/ice matcha.jpg" alt="Iced Matcha" width="100">
+        <p>Kcal: 170 | Sugar: 12g</p>
+    </td>
+</tr>
+
+<!-- 34. Macchiato -->
+<tr class="menu-item" data-item="macchiato">
+    <td>Macchiato</td><td>Beverage</td><td>RM9.00</td>
+</tr>
+<tr class="menu-item-details" id="details-macchiato">
+    <td colspan="3">
+        <img src="gambar/macchiato.jpg" alt="Macchiato" width="100">
+        <p>Kcal: 150 | Sugar: 10g</p>
+    </td>
+</tr>
+
+<!-- 35. Croissant Ham & Cheese -->
+<tr class="menu-item" data-item="croissant-hamcheese">
+    <td>Carbonara Spaghetti</td><td>Snack</td><td>RM15.50</td>
+</tr>
+<tr class="menu-item-details" id="details-croissant-hamcheese">
+    <td colspan="3">
+        <img src="gambar/carbonara.jpg" alt="Croissant Ham & Cheese" width="100">
+        <p>Kcal: 250 | Sugar: 10g</p>
+
+        </tbody>
+    </table>
+</div>
+
+<script src="menu.js"></script>
+</body>
+</html>
+
+</div>
+
+
+<!-- STAFF LIST -->
+<div class="list-card">
+    <h2>Staff List</h2>
+    <div class="search-container">
+        <input type="text" placeholder="Search staff..." onkeyup="filterTable('staff', this.value)">
+    </div>
+    <table id="staff-table">
+        <thead>
+            <tr><th>Name</th><th>Role</th><th>Shift</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Aiman</td><td>Barista</td><td>Morning</td></tr>
+            <tr><td>Sofia</td><td>Cashier</td><td>Evening</td></tr>
+            <tr><td>Danial</td><td>Manager</td><td>Full Day</td></tr>
+            
+
+        </tbody>
+    </table>
+</div>
+
+<script src="menu.js"></script>
+</body>
+</html>
+
+</div>
+
+<!-- CUSTOMERS LIST -->
+<div class="list-card">
+    <h2>Customers List</h2>
+    <div class="search-container">
+        <input type="text" placeholder="Search customers..." onkeyup="filterTable('customers', this.value)">
+    </div>
+    <table id="customers-table">
+        <thead>
+            <tr><th>Name</th><th>Visits</th><th>Member</th></tr>
+        </thead>
+        <tbody>
+<tr><td>Hannah</td><td>12</td><td>Yes</td></tr>
+<tr><td>Rafiq</td><td>4</td><td>No</td></tr>
+<tr><td>Aisha</td><td>7</td><td>Yes</td></tr>
+<tr><td>Adam</td><td>3</td><td>No</td></tr>
+<tr><td>Siti</td><td>9</td><td>Yes</td></tr>
+<tr><td>Farid</td><td>5</td><td>No</td></tr>
+<tr><td>Liyana</td><td>8</td><td>Yes</td></tr>
+<tr><td>Imran</td><td>2</td><td>No</td></tr>
+<tr><td>Amira</td><td>10</td><td>Yes</td></tr>
+<tr><td>Zain</td><td>6</td><td>No</td></tr>
+<tr><td>Maya</td><td>11</td><td>Yes</td></tr>
+<tr><td>Hafiz</td><td>1</td><td>No</td></tr>
+
+        </tbody>
+    </table>
+</div>
+
+<script src="js/dataview.js"></script>
+</body>
+</html>

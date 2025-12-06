@@ -1,0 +1,115 @@
+/* GLOBAL BODY */
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 20px;
+}
+
+/* NAVBAR */
+nav {
+    width: 100%;
+    background: #ffffff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+nav ul li a:hover {
+    background: #f0f0f0;
+    color: #000000;
+}
+
+/* HEADING */
+h1 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* LIST CARD */
+.list-card {
+    background: #ffffff;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* SEARCH BAR */
+.search-container {
+    text-align: right;
+    margin-bottom: 10px;
+}
+.search-container input {
+    padding: 7px 12px;
+    border-radius: 5px;
+    border: 1px solid #888888;
+    outline: none;
+    width: 200px;
+}
+.search-container input:focus {
+    border-color: #000000;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #888888;
+}
+th {
+    background: #f0f0f0;
+    font-weight: 600;
+    color: #000000;
+}
+tr:nth-child(even) { background: #f9f9f9; }
+tr:hover { background: #eaeaea; }
+
+/* MENU ITEM DETAILS (hidden initially) */
+.menu-item-details { display: none; background: #f9f9f9; }
+.menu-item { cursor: pointer; }
+
+/* BUTTON (green normal, red test) */
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #04AA6D;
+    color: white;
+    cursor: pointer;
+}
+button:hover { background-color: #059862; }
+
+.testbtn {
+    background-color: #8B0000;
+}
+.testbtn:hover { background-color: #ff4d4d; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .list-card { width: 95%; }
+    .search-container input { width: 100%; }
+}

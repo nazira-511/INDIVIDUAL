@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Café Data Visualization</title>
+<style>
+/* ====== CSS ====== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+nav ul li { margin: 0 20px; }
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+nav ul li a:hover { text-decoration: underline; }
+
+section {
+    padding: 20px;
+    margin-top: 70px;
+}
+
+h1, h2 { text-align:center; color:#121230; }
+
+.list-card {
+    background: white;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+canvas { width: 100% !important; height: 350px !important; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="welcome.html">Back</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="dataview.html">Data View</a></li>
+    </ul>
+</nav>
+
+<section>
+    <h1>Café Data Visualization</h1>
+
+    <div class="list-card">
+        <h2>Monthly Sales (RM)</h2>
+        <canvas id="monthlySalesChart"></canvas>
+    </div>
+
+    <div class="list-card">
+        <h2>Most Popular Drinks</h2>
+        <canvas id="popularDrinksChart"></canvas>
+    </div>
+
+    <div class="list-card">
+        <h2>Most Popular Food</h2>
+        <canvas id="popularFoodChart"></canvas>
+    </div>
+</section>
+
+<script>
+// ====== JS Inline ======
+
+// Monthly Sales
+new Chart(document.getElementById('monthlySalesChart'), {
+    type: 'bar',
+    data: {
+        labels: ['Jan','Feb','Mar','Apr','May','Jun'],
+        datasets: [{
+            label: 'Total Sales (RM)',
+            data: [1200,1500,1300,1800,1700,1600],
+            backgroundColor: 'rgba(0,0,0,0.6)',
+            borderColor: '#000',
+            borderWidth: 1
+        }]
+    },
+    options: { responsive:true, scales:{ y:{ beginAtZero:true } } }
+});
+
+// Most Popular Drinks
+new Chart(document.getElementById('popularDrinksChart'), {
+    type: 'bar',
+    data: {
+        labels: ['Latte','Mocha','Cappuccino','Americano','Espresso'],
+        datasets:[{
+            label:'Items Sold',
+            data:[120,150,90,70,50],
+            backgroundColor:'#000'
+        }]
+    },
+    options:{ indexAxis:'y', responsive:true, scales:{ x:{ beginAtZero:true } } }
+});
+
+// Most Popular Food
+new Chart(document.getElementById('popularFoodChart'), {
+    type: 'bar',
+    data: {
+        labels:['Cheesecake','Brownie','Croissant','Muffin','Sandwich'],
+        datasets:[{
+            label:'Items Sold',
+            data:[80,60,50,40,30],
+            backgroundColor:'#333'
+        }]
+    },
+    options:{ indexAxis:'y', responsive:true, scales:{ x:{ beginAtZero:true } } }
+});
+</script>
+
+</body>
+</html>

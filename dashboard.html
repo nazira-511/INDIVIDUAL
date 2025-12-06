@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<style>
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff; /* putih bersih */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+nav {
+    background-color: #ffffff; /* putih */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* soft shadow */
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+nav ul li { margin: 0 20px; }
+nav ul li a {
+    color: #000000; /* hitam */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+nav ul li a:hover { 
+    text-decoration: underline; 
+    color: #555555; /* hover gray */
+}
+
+/* Main Section */
+section {
+    padding: 20px;
+    margin-top: 70px; /* space for fixed navbar */
+}
+
+/* Headings */
+h1, h2 { 
+    color: #000000; 
+    text-align: center; 
+}
+
+/* Summary Cards */
+.summary-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.card {
+    background: #f4f2f2; /* putih */
+    padding: 20px;
+    width: 200px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05); /* soft shadow */
+    margin: 10px;
+}
+.card h3 { 
+    margin-bottom: 10px; 
+    color: #333333; 
+}
+.card p { 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #000000; 
+}
+
+/* Orders Table */
+.orders-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.orders-table th, .orders-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #888888; /* slightly darker gray for visibility */
+}
+.orders-table th {
+    background: #f0f0f0; /* subtle gray header */
+    color: #000000; 
+}
+.orders-table tr:nth-child(even) { 
+    background: #f9f9f9; 
+}
+
+/* Highlight Pending Orders */
+.orders-table td.status-pending {
+    background-color: #f5f5f5; /* light gray instead of yellow */
+    color: #555555;
+    font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <ul>
+        <li><a href="welcome.html">Back</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="dataview.html">Data View</a></li>
+        <li><a href="charts.html">Chart</a></li>
+        
+    </ul>
+</nav>
+
+<!-- Dashboard Section -->
+<section id="dashboard">
+    <h1>Dashboard</h1>
+
+    <!-- Summary Cards -->
+    <div class="summary-cards">
+        <div class="card"><h3>Total Orders</h3><p>25</p></div>
+        <div class="card"><h3>Revenue</h3><p>RM207</p></div>
+        <div class="card"><h3>Menu Items</h3><p>28</p></div>
+        <div class="card"><h3>Pending Orders</h3><p>7</p></div>
+    </div>
+
+    <!-- Recent Orders Table -->
+    <h2>Recent Orders</h2>
+    <div class="orders-table">
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Items</th>
+                <th>Total</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>John</td>
+                <td>Coffee, Cake</td>
+                <td>RM12</td>
+                <td class="status-pending">Pending</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Mary</td>
+                <td>Latte</td>
+                <td>RM5</td>
+                <td>Completed</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Harry</td>
+                <td>Latte, Cake</td>
+                <td>RM11</td>
+                <td>Completed</td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Norman</td>
+                <td>Americano</td>
+                <td>RM7</td>
+                <td>Completed</td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>Yasmin</td>
+                <td>Crepes</td>
+                <td>RM8</td>
+                <td>Completed</td>
+            </tr>
+            <tr>
+                <td>006</td>
+                <td>Ellia</td>
+                <td>Buttercreme Latte</td>
+                <td>RM13</td>
+                <td>Completed</td>
+            </tr>
+            <tr>
+                <td>007</td>
+                <td>Ahmad</td>
+                <td>Espresso</td>
+                <td>RM7</td><td class="status-pending">Pending</td>
+            </tr>
+<tr>
+    <td>008</td>
+    <td>Li Wei</td>
+    <td>Latte</td>
+    <td>RM5</td>
+    <td>Completed</td>
+</tr>
+<tr>
+    <td>009</td>
+    <td>Raj</td>
+    <td>Americano</td>
+    <td>RM6</td>
+    <td>Completed</td>
+</tr>
+<tr>
+    <td>010</td>
+    <td>Ellia</td>
+    <td>Buttercreme Latte</td>
+    <td>RM13</td>
+    <td>Completed</td>
+</tr>
+<tr>
+    <td>011</td>
+    <td>Siti</td>
+    <td>Cappuccino</td>
+    <td>RM8</td>
+    <td class="status-pending">Pending</td>
+</tr>
+<tr>
+    <td>012</td>
+    <td>Tan</td>
+    <td>Mocha</td>
+    <td>RM9</td>
+    <td>Completed</td>
+</tr>
+<tr>
+    <td>013</td>
+    <td>Kumar</td>
+    <td>Flat White</td>
+    <td>RM7</td>
+    <td>Completed</td>
+</tr>
+<tr>
+    <td>014</td>
+    <td>Aminah</td>
+    <td>Caramel Latte</td>
+    <td>RM10</td><td class="status-pending">Pending</td>
+</tr>
+<tr>
+    <td>015</td>
+    <td>Chong</td>
+    <td>Long Black</td>
+    <td>RM6</td>
+    <td>Completed</td>
+</tr>
+<tr>
+    <td>016</td>
+    <td>Deepak</td>
+    <td>Affogato</td>
+    <td>RM12</td>
+    <td>Completed</td>
+</tr>
+<tr>
+    <td>017</td>
+    <td>Nurul</td>
+    <td>Mocha</td>
+    <td>RM9</td>
+    <td class="status-pending">Pending</td>
+</tr>
+<tr>
+    <td>018</td>
+    <td>Lim</td>
+    <td>Espresso</td>
+    <td>RM7</td>
+    <td>Completed</td>
+</tr>
+<tr>
+    <td>019</td>
+    <td>Ravi</td>
+    <td>Cappuccino</td>
+    <td>RM8</td>
+    <td>Completed</td>
+</tr>
+<tr>
+    <td>020</td>
+    <td>Hafiz</td>
+    <td>Latte</td>
+    <td>RM5</td>
+    <td class="status-pending">Pending</td>
+</tr>
+<tr>
+    <td>021</td>
+    <td>Mei Ling</td>
+    <td>Flat White</td>
+    <td>RM7</td>
+    <td>Completed</td>
+</tr>
+<tr>
+    <td>022</td>
+    <td>Shan</td>
+    <td>Caramel Latte</td>
+    <td>RM10</td>
+    <td>Completed</td>
+</tr>
+<tr>
+    <td>023</td>
+    <td>Aisyah</td>
+    <td>Mocha</td>
+    <td>RM9</td>
+    <td class="status-pending">Pending</td>
+</tr>
+<tr>
+    <td>024</td>
+    <td>Cheah</td>
+    <td>Americano</td>
+    <td>RM6</td>
+    <td>Completed</td>
+</tr>
+<tr>
+    <td>025</td>
+    <td>Karthik</td>
+    <td>Espresso</td>
+    <td>RM7</td>
+    <td>Completed</td>
+</tr>
+
+        </table>
+    </div>
+</section>
+
+<form onsubmit="return checkLogin()">
+        <input id="username" type="text" placeholder="Username">
+        <input id="password" type="password" placeholder="Password">
+        <button type="testbtn">Low stock</button>
+    </form>
+
+<script src="script1.js"></script>
+</body>
+</html>
